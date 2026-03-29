@@ -6,6 +6,11 @@ function Form({ handleSubmit }) {
 
   const updateSearchInput = (event) => {
     setSearchEntry(event.target.value);
+
+    // Tratar erro do usuario de entrada como digitação de . ou , ou caracter especiais, limpando o campo de input
+    if (event.target.value.trim() === "." || event.target.value.trim() === "," || /[!@#$%^&*(),.?":{}|<>]/.test(event.target.value)) {
+      setSearchEntry("");
+    }
   }
 
 
