@@ -1,5 +1,5 @@
 
-function Image(url, title) {
+function Image({url, title}) {
   return (
     <li>
       <img src={url} alt={title} />
