@@ -1,10 +1,11 @@
+import Container from "./Container";
 
 function Item({ searchItem }) {
 
   return (
     <div>
       <h2>{searchItem} Photos</h2>
-      <p>Container</p>
+      <Container searchTerm={searchItem} />
     </div>
   );
 
