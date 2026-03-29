@@ -1,21 +1,33 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  text-align: center;
+  font-family: "josefin Sans", Arial, Helvetica, sans-serif;
+  color: #3f4850;
 }
 
 h1 {
   font-family: 'Lobster', 'josefin Sans', Arial, Helvetica, sans-serif;
   font-size: 4em;
   color: #051c33;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 52px 0 40px;
+  text-transform: capitalize;
+  color: #051c33;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.is-hidden {
+  border: 0;
 }
 
 .search-form {
@@ -55,4 +67,32 @@ h1 {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.main-nav a {
+  display: block;
+  background: #051c33;
+  border-radius: 3px;
+  padding: 5px;
+  color: #fff;
+}
+
+.main-nav li {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.main-nav .active,
+.main-nav a:hover {
+  background: #051c33;
+}
+
+input {
+  font-size: 1em;
+  width: 100%;
+  background-color: #edeff0;
+  padding: 10px 15px;
+  border: 3px solid #d7dbdf;
+  border-radius: 0.35em 0 0 0.35em;
+  outline: none;
 }
