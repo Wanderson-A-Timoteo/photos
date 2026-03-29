@@ -3,6 +3,7 @@ import './App.css';
 import PhotoContextProvider from './context/PhotoContext';
 import Header from './components/Header';
 import Item from './components/Item';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
           <Route path="/Architecture" element={<Item searchItem="Architecture" />} />
           <Route path="/Coding" element={<Item searchItem="Coding" />} />
           <Route path="/Coffee" element={<Item searchItem="Coffee" />} />
+
+          {/* Rota para itens não encontrados */}
+          <Route path="*" element={<NotFound />} />
+
         </Routes>
       </BrowserRouter>
     </PhotoContextProvider>
