@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes, useNavigate, useParams } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes, useNavigate, useParams } from 'react-router-dom';
 import './App.css';
 import PhotoContextProvider from './context/PhotoContext';
 import Header from './components/Header';
@@ -14,13 +14,12 @@ function SearchWrapper() {
 
 function HeaderWrapper() {
 
-  // Hook para mudar a url do navegador programaticamente
   const navigate = useNavigate();
   
   function handleSubmit(event, searchInput) {
-    event.preventDefault(); // Impedir o carregamento da página
-    event.currentTarget.reset(); // Limpa o campo de input após o envio
-    navigate(`/search/${searchInput}`); // Empurra o usuário para a nova rota
+    event.preventDefault();
+    event.currentTarget.reset();
+    navigate(`/search/${searchInput}`);
   };
 
   return <Header handleSubmit={handleSubmit} />;
@@ -30,7 +29,7 @@ function HeaderWrapper() {
 function App() {
   return (
     <PhotoContextProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div>
           <HeaderWrapper />
 
@@ -52,7 +51,7 @@ function App() {
 
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </PhotoContextProvider>
   );
 }
