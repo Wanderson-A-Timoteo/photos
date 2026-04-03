@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+<h1 align="center">
+  📸 Photos
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-executar-aplicação">Executar Aplicação</a>
+</p>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+## 💻 Projeto
 
-### `npm start`
+Bem-vindo ao repositório da **Photos**, uma aplicação web front-end desenvolvida em **React.js**. Este projeto foi construído como fundação arquitetural para o consumo dinâmico de dados, permitindo a listagem e busca por imagens em alta resolução através da integração com uma API externa de fotografias. 🖼️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Projeto focado na introdução à construção de Single Page Applications (SPA), manipulação de estados e consumo de APIs RESTful.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+🔗 **Demo Online:** [photos.github.io](https://wanderson-a-timoteo.github.io/photos/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+## 🚀 Funcionalidades
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Página Inicial (Galeria):** Exibição de um mural dinâmico em formato de grade (grid) com as fotos mais recentes ou em destaque.
+- **Sistema de Busca:** Pesquisa por palavras-chave para encontrar fotografias específicas de forma rápida.
+- **Visualização Detalhada:** Interação com as imagens (Modal/Lightbox) para visualização em tamanho maior e verificação de detalhes do fotógrafo ou resolução.
+- **Design Responsivo:** Layout adaptável para garantir uma boa experiência em desktops, tablets e smartphones.
+- **Tratamento de Estados:** Feedback visual de *Loading* durante as requisições para garantir uma boa Experiência do Usuário (UX).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm run eject`
+- **React.js** (Hooks: `useState`, `useEffect`)
+- **React Router DOM** (Navegação SPA)
+- **CSS3** (Estilização em Grid/Flexbox)
+- **Fetch API** (Requisições HTTP)
+- **API de Imagens** (Fonte de dados externa)
+- **Git & GitHub** (Versionamento e Hospedagem)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔥 Executando Localmente a Aplicação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Caso você deseje executar o projeto na sua máquina local, basta seguir os passos abaixo:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🌀 Começando...
 
-## Learn More
+Para começar, você deve clonar o repositório do projeto na sua máquina e instalar as dependências.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 🔑 Variáveis de Ambiente (API Key):
+Como este projeto consome dados de uma API externa, você poderá precisar de uma chave de desenvolvedor.
+1. Crie uma conta na plataforma da API utilizada (ex: Unsplash/Pexels) e gere a sua API Key.
+2. Na raiz do projeto clonado, crie um arquivo chamado `.env`.
+3. Adicione a sua chave dentro do arquivo: `REACT_APP_PHOTO_API_KEY=sua_chave_aqui`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### ❗️ Instalando as Dependências:
 
-### Code Splitting
+Abra o seu terminal (como o WSL/Ubuntu ou CMD) e navegue até o diretório onde deseja armazenar o projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone git@github.com:Wanderson-A-Timoteo/projeto-ii-photos.git
+```
+Depois, acesse a pasta clonada e digite a seguinte instrução para baixar todas as dependências (`node_modules`) necessárias:
 
-### Analyzing the Bundle Size
+### 💨 Executando a Aplicação
+Com as dependências instaladas e o .env configurado (se necessário), inicie o servidor de desenvolvimento local digitando:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
+Pronto! Dessa forma o projeto estará rodando localmente em sua máquina. Acesse no navegador:
 
-### Making a Progressive Web App
+```
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br>
 
-### Advanced Configuration
+### 🚩 Tenho Dúvidas... O que fazer?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Caso tenham dúvidas sobre o código do projeto, sintam-se a vontade em abrir uma **[ISSUE AQUI](https://github.com/Wanderson-A-Timoteo/photos/issues)**. Assim que possível, estarei respondendo as todas as dúvidas que tiverem!
 
-### Deployment
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Autor:
 
-### `npm run build` fails to minify
+Feito com ♥ by
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div align="center">
+  <a href="https://github.com/Wanderson-A-Timoteo">
+    <img src="https://github.com/Wanderson-A-Timoteo.png" width="120px;" alt="Foto de Perfil do Wanderson Timóteo no GitHub" style="border-radius: 50%;"/>
+  </a>
+  <br />
+  <br />
+  <h4>Wanderson Timóteo</h4>
+    
+  <a href="https://www.wandersontimoteo.com.br/" target="_blank">
+    <b>🌐 Visite meu Portfólio</b>
+  </a>
+  &nbsp;|&nbsp;
+  <a href="https://wanderson-a-timoteo.github.io/perfil-de-contato/" target="_blank">
+    <b>🔗 Entre em Contato</b>
+  </a>
+</div>
