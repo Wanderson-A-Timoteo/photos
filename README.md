@@ -85,6 +85,62 @@ Caso tenham dúvidas sobre o código do projeto, sintam-se a vontade em abrir um
 
 <br>
 
+## 🌐 Hospedagem e Roteamento (GitHub Pages)
+
+Este projeto está hospedado e disponível publicamente através do **GitHub Pages**. Para garantir que a navegação da aplicação funcione de maneira impecável em um ambiente de servidor de arquivos estáticos, adotamos uma estratégia específica de roteamento.
+
+### A Escolha do HashRouter
+
+Por padrão, SPAs em React utilizam o `BrowserRouter`. No entanto, em servidores como o GitHub Pages, isso gera um **Erro 404** se o usuário tentar recarregar a página (F5) em uma rota interna (ex: `/menu`), pois o servidor tenta localizar um arquivo físico `menu.html` que não existe (já que toda a aplicação roda dentro do `index.html`).
+
+Para resolver esse comportamento e manter a resiliência do projeto, o código foi refatorado para utilizar o **`HashRouter`**:
+- **Como funciona:** Ele injeta uma "hashtag" na URL (ex: `https://seu-usuario.github.io/photos/#/menu`).
+- **O Resultado:** O servidor do GitHub sempre processa a requisição apontando para a raiz (`index.html`), permitindo que o React intercepte o caminho que vem após o `#` e renderize o componente correto dinamicamente. Isso evita qualquer tipo de "tela em branco" em atualizações de página.
+
+
+### 🚀 Deploy no GitHub Pages
+
+Para disponibilizar o **Photos** online, utilizamos o **GitHub Pages**. Abaixo, o passo a passo para configurar e realizar o deploy da aplicação de forma automatizada.
+
+#### 1. Instalação do Pacote
+O primeiro passo é instalar o pacote `gh-pages` como uma dependência de desenvolvimento no projeto:
+
+```bash
+npm install gh-pages --save-dev
+```
+
+#### 2. Configuração do package.json
+
+É necessário informar ao React qual será a URL base da aplicação e quais comandos devem ser executados para o deploy.
+
+- Adicionar Homepage: No arquivo package.json, adicione a seguinte propriedade (substituindo pelo link do seu repositório):
+
+```JSON
+"homepage": "https://SEU-NOME-DE-USUARIO-DO-GITHUB.github.io/NOME-DO-PROJETO",
+```
+
+- Configurar Scripts: No mesmo arquivo, dentro do bloco "scripts", adicione os comandos de predeploy e deploy:
+
+
+```JSON
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+  "start": "react-scripts start", // Já existe
+  ...mantém o resto
+}
+```
+
+#### 3. Executando o Deploy
+
+Com tudo configurado, basta rodar o comando abaixo no terminal. Ele irá gerar uma build otimizada da aplicação e criar automaticamente uma branch chamada gh-pages no GitHub com os arquivos prontos para produção:
+
+```bash
+npm run deploy
+```
+
+<br>
+
 ## Autor:
 
 Feito com ♥ by
